@@ -1,8 +1,11 @@
 ---
 title: Search smarter with operators
+tags: [search, google]
 ---
 
-Add these to a Google or Bing search to narrow the results:
+{{< badge content="Google & Bing" color="blue" >}}
+
+Add a {{< term "search operator" >}} to a search to narrow the results:
 
 | Type this | To get |
 | --- | --- |
@@ -13,3 +16,9 @@ Add these to a Google or Bing search to narrow the results:
 | `intitle:review` | Pages with the word in their title |
 
 Combine them: `site:reddit.com "battery drain" -iphone`.
+
+{{< details title="Example searches" closed="true" >}}
+- `"error 0x80070005" site:microsoft.com`: an error code, on Microsoft's site only.
+- `budget template filetype:xlsx`: ready-made spreadsheets.
+- `intitle:review "galaxy a56" -sponsored`: reviews, minus sponsored ones.
+{{< /details >}}

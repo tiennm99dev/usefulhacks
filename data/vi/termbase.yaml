@@ -1,0 +1,15 @@
+- term: xác thực hai lớp
+  abbr: 2FA
+  definition: "Bước xác minh thứ hai sau mật khẩu, ví dụ mã từ ứng dụng hoặc khóa bảo mật"
+- term: passkey
+  definition: "Cách đăng nhập dùng khóa màn hình của thiết bị thay cho mật khẩu; chỉ hoạt động trên đúng trang thật nên không bị lừa đảo đánh cắp"
+- term: SIM swap
+  definition: "Chiêu lừa thuyết phục nhà mạng chuyển số điện thoại của bạn sang SIM của kẻ gian, để họ nhận mã SMS của bạn"
+- term: độ trễ
+  abbr: latency
+  definition: "Thời gian dữ liệu đi tới máy chủ và quay về, tính bằng mili giây; càng thấp càng mượt"
+- term: độ dao động
+  abbr: jitter
+  definition: "Mức độ trễ thay đổi liên tục; dao động cao làm cuộc gọi và game bị giật"
+- term: toán tử tìm kiếm
+  definition: "Ký hiệu hoặc từ khóa thêm vào câu tìm kiếm, như dấu ngoặc kép hoặc site:, để thu hẹp kết quả"

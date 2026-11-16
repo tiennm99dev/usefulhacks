@@ -1,0 +1,13 @@
+- term: two-factor authentication
+  abbr: 2FA
+  definition: "A second proof of identity after your password, such as a code from an app or a security key"
+- term: passkey
+  definition: "A sign-in that uses your device's screen lock instead of a password; it only works on the real site, so phishing cannot steal it"
+- term: SIM swap
+  definition: "A scam where someone convinces your carrier to move your phone number to their SIM card, so they receive your SMS codes"
+- term: latency
+  definition: "How long data takes to reach a server and come back, in milliseconds; lower feels snappier"
+- term: jitter
+  definition: "How much latency varies from moment to moment; high jitter makes calls and games stutter"
+- term: search operator
+  definition: "A symbol or keyword added to a search, such as quotes or site:, that narrows the results"

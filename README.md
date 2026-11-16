@@ -18,9 +18,18 @@ Then open <http://localhost:1313/usefulhacks/>.
 
 ## Adding a tip
 
-Add a Markdown file under `content/docs/<category>/`, with a `title` in its
-front matter. The sidebar, search and "last updated" date pick it up on their
-own. A new category is a new folder with an `_index.md`.
+Add a Markdown file under `content/docs/<category>/`, with a `title` and
+`tags` in its front matter, and its Vietnamese copy beside it as
+`<name>.vi.md`. The sidebar, search, tag pages and "last updated" date pick it
+up on their own. A new category is a new folder with `_index.md` and
+`_index.vi.md`.
+
+Terms used with `{{< term "..." >}}` are defined in `data/en/termbase.yaml`
+and `data/vi/termbase.yaml`, which also feed the Glossary page. News posts go
+in `content/blog/`.
+
+Comments use [Giscus](https://giscus.app) on the repository's Discussions
+(category "Announcements").
 
 Pushing to `main` builds the site with the latest Hugo and deploys it to
 GitHub Pages. Update the theme with `hugo mod get -u && hugo mod tidy`.

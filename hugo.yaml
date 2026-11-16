@@ -1,11 +1,41 @@
 title: Useful Hacks
 baseURL: https://tiennm99dev.github.io/usefulhacks/
-languageCode: en-us
 enableGitInfo: true
+enableRobotsTXT: true
 
 module:
   imports:
     - path: github.com/imfing/hextra
+
+defaultContentLanguage: en
+languages:
+  en:
+    label: English
+    locale: en-US
+    weight: 1
+  vi:
+    label: Tiếng Việt
+    locale: vi-VN
+    weight: 2
+    params:
+      description: Mẹo và thủ thuật hữu ích khi dùng công nghệ và internet hằng ngày.
+      banner:
+        message: |
+          Useful Hacks đã có **bản tiếng Việt**! 🎉 [Đọc thêm]({{% relref "blog/welcome" %}})
+      page:
+        contextMenu:
+          links:
+            - name: Mở trong ChatGPT
+              icon: chatgpt
+              url: "https://chatgpt.com/?hints=search&q=T%C3%B4i+%C4%91ang+%C4%91%E1%BB%8Dc+m%E1%BA%B9o+n%C3%A0y%3A+{url}%0AGi%E1%BA%A3i+th%C3%ADch+gi%C3%BAp+t%C3%B4i+c%C3%A1ch+l%C3%A0m."
+            - name: Mở trong Claude
+              icon: claude
+              url: "https://claude.ai/new?q=T%C3%B4i+%C4%91ang+%C4%91%E1%BB%8Dc+m%E1%BA%B9o+n%C3%A0y%3A+{url}%0AGi%E1%BA%A3i+th%C3%ADch+gi%C3%BAp+t%C3%B4i+c%C3%A1ch+l%C3%A0m."
+
+outputs:
+  home: [html, rss, llms]
+  page: [html, markdown]
+  section: [html, rss, markdown]
 
 markup:
   goldmark:
@@ -16,29 +46,97 @@ markup:
 
 menu:
   main:
-    - name: Tips
+    - identifier: tips
+      name: Tips
       pageRef: /docs
       weight: 1
-    - name: Search
+    - identifier: glossary
+      name: Glossary
+      pageRef: /glossary
       weight: 2
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 3
+    - identifier: archives
+      name: Archives
+      pageRef: /archives
+      weight: 4
+    - name: Search
+      weight: 5
       params:
         type: search
     - name: GitHub
-      weight: 3
+      weight: 6
       url: https://github.com/tiennm99dev/usefulhacks
       params:
         icon: github
 
 params:
   description: Useful tips and tricks for everyday tech and internet use.
+
+  externalLinkDecoration: true
+
+  banner:
+    key: vietnamese-launch
+    message: |
+      Useful Hacks is now available in **Vietnamese**! 🎉 [Read more]({{% relref "blog/welcome" %}})
+
   navbar:
     displayTitle: true
     displayLogo: false
+
+  theme:
+    default: system
+    displayToggle: true
+
   footer:
     displayCopyright: false
     displayPoweredBy: true
+
   displayUpdatedDate: true
+  displayUpdatedAuthor: true
   dateFormat: January 2, 2006
+
   editURL:
     enable: true
     base: https://github.com/tiennm99dev/usefulhacks/edit/main/content
+
+  toc:
+    displayTags: true
+
+  blog:
+    list:
+      displayTags: true
+
+  archives:
+    section: blog
+
+  highlight:
+    copy:
+      enable: true
+      display: hover
+
+  imageZoom:
+    enable: true
+
+  page:
+    contextMenu:
+      enable: true
+      links:
+        - name: Open in ChatGPT
+          icon: chatgpt
+          url: "https://chatgpt.com/?hints=search&q=I%27m+reading+this+tip%3A+{url}%0AHelp+me+follow+it."
+        - name: Open in Claude
+          icon: claude
+          url: "https://claude.ai/new?q=I%27m+reading+this+tip%3A+{url}%0AHelp+me+follow+it."
+
+  comments:
+    enable: true
+    type: giscus
+    giscus:
+      repo: tiennm99dev/usefulhacks
+      repoId: R_kgDOVwM01w
+      category: Announcements
+      categoryId: DIC_kwDOVwM0184DLQA1
+      mapping: pathname
